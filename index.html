@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
             padding: 20px;
             color: #333;
         }
@@ -32,7 +32,7 @@
         }
 
         h1 {
-            color: #667eea;
+            color: #2c5282;
             margin-bottom: 10px;
             font-size: 2.2em;
         }
@@ -76,7 +76,7 @@
         }
 
         .card h2 {
-            color: #667eea;
+            color: #2c5282;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -84,7 +84,7 @@
         }
 
         .option-badge {
-            background: #667eea;
+            background: #2c5282;
             color: white;
             padding: 5px 12px;
             border-radius: 20px;
@@ -157,7 +157,7 @@
         }
 
         .shared-dates {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
             color: white;
             padding: 25px;
             border-radius: 15px;
@@ -226,12 +226,12 @@
         }
 
         .venue-card:hover {
-            border-color: #667eea;
+            border-color: #2c5282;
             transform: scale(1.02);
         }
 
         .venue-card h3 {
-            color: #667eea;
+            color: #2c5282;
             margin-bottom: 10px;
         }
 
@@ -261,7 +261,7 @@
         }
 
         .timeline-time {
-            background: #667eea;
+            background: #2c5282;
             color: white;
             padding: 10px 15px;
             border-radius: 8px;
@@ -340,6 +340,33 @@
         .full-width {
             grid-column: 1 / -1;
         }
+
+        /* Money emoji rain animation */
+        .money-emoji {
+            position: fixed;
+            font-size: 2em;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1000;
+            animation: float-down 8s linear infinite;
+        }
+
+        @keyframes float-down {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -348,7 +375,7 @@
             <h1>🏆 Maryland Teacher Awards Reception</h1>
             <div class="subtitle">Planning Dashboard - Scheduling & Venue Analysis</div>
             <div class="subtitle" style="margin-top: 10px; font-size: 0.9em; color: #999;">
-                Plannning | Meeting: November 14, 2025 @ 10:00 AM
+                MSDE Division of College and Career Pathways | Meeting: November 14, 2025 @ 10:00 AM
             </div>
         </header>
 
@@ -360,7 +387,7 @@
         </div>
 
         <div style="background: white; padding: 25px; border-radius: 15px; margin-top: 20px;">
-            <h2 style="color: #667eea; margin-bottom: 15px;">📚 Reference Materials</h2>
+            <h2 style="color: #2c5282; margin-bottom: 15px;">📚 Reference Materials</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
                 <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
                     <h3 style="font-size: 1em; color: #333; margin-bottom: 8px;">📄 MSDE School Calendar Data</h3>
@@ -558,7 +585,7 @@
         </div>
 
         <div class="venue-section">
-            <h2 style="color: #667eea; margin-bottom: 15px;">📍 Option 3: Columbia, MD Venue Candidates</h2>
+            <h2 style="color: #2c5282; margin-bottom: 15px;">📍 Option 3: Columbia, MD Venue Candidates</h2>
             <p style="margin-bottom: 15px; color: #666;">
                 <strong>Location Rationale:</strong> Columbia (Howard County) is centrally located between Baltimore and DC, 
                 making it accessible for all 24 Maryland LEAs. Approximately 30-40 minutes from Annapolis State House.
@@ -630,7 +657,7 @@
             </div>
         </div>
 
-        <div class="card full-width" style="background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); color: white;">
+        <div class="card full-width" style="background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%); color: white;">
             <h2 style="color: white;">📊 Decision Framework</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
                 <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px;">
@@ -650,6 +677,7 @@
                 </div>
             </div>
         </div>
+
         <footer style="text-align: center; color: white; margin-top: 30px; padding: 20px; opacity: 0.9;">
             <p style="font-size: 0.9em;">Prepared by: W. Forrester and his merry AI orchestration</p>
             <p style="font-size: 0.85em; margin-top: 10px;">Meeting: November 14, 2025 @ 10:00 AM</p>
@@ -726,7 +754,7 @@
                         // Add expanded to this card if it wasn't already
                         if (!wasExpanded) {
                             this.classList.add('expanded');
-                            this.style.boxShadow = '0 15px 40px rgba(102,126,234,0.4)';
+                            this.style.boxShadow = '0 15px 40px rgba(44,82,130,0.4)';
                         }
                     });
                 }
@@ -735,6 +763,30 @@
             console.log('📊 Maryland Teacher Awards Reception Planning Dashboard Loaded');
             console.log('👥 Stakeholders: CASH Campaign, MSDE, Towson University');
             console.log('📅 Meeting: November 14, 2025 @ 10:00 AM');
+
+            // Money emoji rain effect
+            function createMoneyEmoji() {
+                const emoji = document.createElement('div');
+                emoji.classList.add('money-emoji');
+                emoji.textContent = '💰';
+                emoji.style.left = Math.random() * 100 + 'vw';
+                emoji.style.animationDelay = Math.random() * 5 + 's';
+                emoji.style.animationDuration = (8 + Math.random() * 4) + 's';
+                document.body.appendChild(emoji);
+
+                // Remove emoji after animation
+                setTimeout(() => {
+                    emoji.remove();
+                }, 12000);
+            }
+
+            // Create money emojis periodically
+            setInterval(createMoneyEmoji, 3000);
+            
+            // Create initial batch
+            for (let i = 0; i < 5; i++) {
+                setTimeout(createMoneyEmoji, i * 600);
+            }
         });
     </script>
 </body>
